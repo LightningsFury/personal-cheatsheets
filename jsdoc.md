@@ -3,10 +3,9 @@
 ## documenting functions
 
 ```js
-
 /**
  * This is a function.
- * 
+ *
  * @param {string} n - A string param
  * @return {string} A good string
  *
@@ -15,7 +14,9 @@
  *     foo('hello')
  */
 
-function foo(n) { return n }
+function foo(n) {
+  return n;
+}
 ```
 
 **See: [jsdoc/index](http://usejsdoc.org/index.html)**
@@ -26,15 +27,15 @@ Using the pretty useful types in jsdoc
 
 ### Selecting types
 
-| type | info |
-|-------------|
-|`@param {string=}` | Optional |
-|`@param {string} [n]` | Optional 2 |
-|`@param {(string|number)} n` | Multiple types |
-|`@param {*} n` | Any type |
-|`@param {...string} n` | Repeatable arguments |
-|`@param {string} [n="hi"]` | Optional with default |
-|`@param {string[]} n` | Array of strings |
+| type                         | info                  |
+| ---------------------------- | --------------------- |
+| `@param {string=}`           | Optional              |
+| `@param {string} [n]`        | Optional 2            |
+| `@param {(string|number)} n` | Multiple types        |
+| `@param {*} n`               | Any type              |
+| `@param {...string} n`       | Repeatable arguments  |
+| `@param {string} [n="hi"]`   | Optional with default |
+| `@param {string[]} n`        | Array of strings      |
 
 **See [jsdoc/tag-types](http://usejsdoc.org/tags-type.html)**
 
@@ -53,11 +54,10 @@ Using the pretty useful types in jsdoc
  * @param {Song} song - The {@link Song} to be played
  */
 
-function play (song) {
-}
+function play(song) {}
 ```
 
-**See: (jsdoc/tags-typedef)[http://usejsdoc.org/tags-typedef.html]**
+**See: [jsdoc/tags-typedef](http://usejsdoc.org/tags-typedef.html)**
 
 ### Defining variables
 
@@ -65,14 +65,14 @@ function play (song) {
 /**
  * @type {number}
  */
-var FOO = 1
+var FOO = 1;
 ```
 
 ```js
 /**
  * @const {number}
  */
-const FOO = 1
+const FOO = 1;
 ```
 
 ### Defining callbacks
@@ -90,7 +90,7 @@ function Requester() {}
  * @param {Requester~requestCallback} cb - The callback that handles the response.
  */
 Requester.prototype.send = function(cb) {
-    // code
+  // code
 };
 
 /**
@@ -100,6 +100,7 @@ Requester.prototype.send = function(cb) {
  * @param {string} responseMessage
  */
 ```
+
 #### Global callback
 
 ```js
@@ -113,7 +114,7 @@ function Requester() {}
  * @param {requestCallback} cb - The callback that handles the response.
  */
 Requester.prototype.send = function(cb) {
-    // code
+  // code
 };
 
 /**
@@ -128,7 +129,7 @@ Requester.prototype.send = function(cb) {
 
 ```js
 /** @function */
-var paginate = paginateFactory(pages)
+var paginate = paginateFactory(pages);
 ```
 
 **Using it with a name**
@@ -140,7 +141,5 @@ var paginate = paginateFactory(pages)
 /** @function
  * @name myFunction */
 ```
-
-
 
 **more cheatsheets coming soon**
