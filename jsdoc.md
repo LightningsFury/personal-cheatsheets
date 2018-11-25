@@ -27,15 +27,15 @@ Using the pretty useful types in jsdoc
 
 ### Selecting types
 
-| type                         | info                  |
-| ---------------------------- | --------------------- |
-| `@param {string=}`           | Optional              |
-| `@param {string} [n]`        | Optional 2            |
-| `@param {(string|number)} n` | Multiple types        |
-| `@param {*} n`               | Any type              |
-| `@param {...string} n`       | Repeatable arguments  |
-| `@param {string} [n="hi"]`   | Optional with default |
-| `@param {string[]} n`        | Array of strings      |
+| type                          | info                  |
+| ----------------------------- | --------------------- |
+| `@param {string=}`            | Optional              |
+| `@param {string} [n]`         | Optional 2            |
+| `@param {(string\|number)} n` | Multiple types        |
+| `@param {*} n`                | Any type              |
+| `@param {...string} n`        | Repeatable arguments  |
+| `@param {string} [n="hi"]`    | Optional with default |
+| `@param {string[]} n`         | Array of strings      |
 
 **See [jsdoc/tag-types](http://usejsdoc.org/tags-type.html)**
 
