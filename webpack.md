@@ -94,7 +94,37 @@ module.exports = {
   }
 };
 ```
+## More stuff
 
+If you're doing react, you probably want to import css to use to, which need to be bundled too.
+For that, install `npm install --save-dev style-loader css-loader`
+Now in webpack config:
+```json
+   module: {
+     rules: [
+       {
+         test: /\.css$/,
+         use: [
+           'style-loader',
+           'css-loader'
+         ]
+       }
+     ]
+   }
+```
+
+For files and pictures, we have file-loader:
+`npm install --save-dev file-loader`
+In webpack config:
+```json
+       {
+         test: /\.(png|svg|jpg|gif)$/,
+         use: [
+           'file-loader'
+         ]
+       }
+```
+In Pixi.JS, you can import the images as a URL and then when loading resources with PIXI.loader.add, the array items will be an object with the image name and the url.
 ## What happens
 
 All the files connected to index.js will be bundled as one with `import something from './something.js'` and `export default something` everywhere.
